@@ -5,14 +5,17 @@
   "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node ./src/server.ts"
+    "start": "ts-node ./src/server.ts",
+    "knex:migrate": "knex migrate:latest --knexfile knextfile.ts  migrate:latest3"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/knex": "^0.16.1",
     "espress": "^0.0.0",
     "knex": "^3.1.0",
+    "server": "file:",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
