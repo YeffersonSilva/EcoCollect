@@ -1,11 +1,12 @@
 import express from 'express';
-import userRoutes from './routes/userRoutes';
+import routes from './routes/routes';
+import path from 'path';
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(userRoutes);
+app.use(routes);
 
 app.use('/uplodas', express.static(path.resolve(__dirname, '..', 'uploads')));
 
