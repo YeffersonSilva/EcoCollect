@@ -1,9 +1,9 @@
-import { Request, Response } from 'express';
+import { Request, Response, RequestHandler } from 'express';
 import knex from '../database/connection';
 
 // Define una interfaz que extienda Request para incluir el archivo
 interface MulterRequest extends Request {
-  file: Express.Multer.File;
+  file?: Express.Multer.File; // Hacemos que el archivo sea opcional
 }
 
 class PointsController {
